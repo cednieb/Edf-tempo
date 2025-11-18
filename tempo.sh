@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# https://ced62.eu/EdfTempo/tempo.html
-
 # touch /var/www/html/EdfTempo/tempo.html
 # chmod +x /var/www/html/EdfTempo/tempo.sh
 # /bin/bash /var/www/html/EdfTempo/tempo.sh
@@ -108,5 +106,6 @@ echo "$(fetch_now 'https://www.api-couleur-tempo.fr/api/now')" >> "$output_file"
 # Append today and tomorrow divs
 echo "$(fetch_tempo 'https://www.api-couleur-tempo.fr/api/jourTempo/today')" >> "$output_file"
 echo "$(fetch_tempo 'https://www.api-couleur-tempo.fr/api/jourTempo/tomorrow')" >> "$output_file"
+
 
 echo "</body></html>" >> "$output_file"
